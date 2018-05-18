@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+   "tabBar": {
+     "selectedColor": "#F5675E",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/homeActive.png"
+    },
+      {
+      "pagePath": "pages/logs/logs",
+      "text": "我的群组",
+      "iconPath": "images/group.png",
+      "selectedIconPath": "images/groupActive.png"
+    },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的医生",
+        "iconPath": "images/md.png",
+        "selectedIconPath": "images/mdActive.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personalActive.png"
+      }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
+

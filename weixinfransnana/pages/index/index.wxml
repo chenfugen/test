@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+   <view class='menu'>
+       <view class="menuleft">
+           <image class='question' src='../../images/question.png'></image>
+           <label class='menuText'>快速问答</label>
+           <text class='menuMsg '>专业在线医生帮您解答</text>
+       </view>
+       <view class="line"></view>
+      <view class="menuRight">
+          <image class='doctor' src='../../images/doctor.png'></image>
+          <label class='menuText'>专家直通</label>
+          <text class='menuMsg '>专业医生帮您解答</text>
+      </view>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="white"  indicator-active-color="#99F7D0"
+            autoplay="{{autoplay}}" interval="{{interval}}"  duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="key" >
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%" height="110"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+</view>

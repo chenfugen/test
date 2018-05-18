@@ -1,0 +1,62 @@
+/**index.wxss**/
+body{
+    font-family: "微软雅黑";
+    background: #F7F7F7;
+}
+view{
+    margin: 0px;
+    padding:0px;
+}
+.menu{
+  width:100%;
+  height: 60px;
+    background: white;
+}
+.menuLeft{
+    float: left;
+    width:50%;
+    height: 60px;
+    position: relative;
+}
+.menuRight{
+    float: right;
+    width:50%;
+    height: 60px;
+    position: relative;
+}
+.question{
+    width: 30px;
+    height:30px;
+    position: absolute;
+    top:15px;
+    left: 10px;
+}
+.doctor{
+    width: 30px;
+    height:30px;
+    position: absolute;
+    top:15px;
+    left: 10px;
+}
+.menuText{
+    position: absolute;
+    top:10px;
+    left:45px;
+    font-size:14px;
+}
+.menuMsg{
+    position: absolute;
+    top:30px;
+    left:45px;
+    font-size:10px;
+    color: #bbb;
+}
+.line{
+    position: absolute;
+    top:10px;
+    height:40px;
+    width:1px;
+    background: #eee;
+    left:50%;
+}
+
