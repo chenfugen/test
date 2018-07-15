@@ -1,0 +1,34 @@
+{% extends 'common/common.html'%}
+{% block main%}
+<ol class="breadcrumb">
+    <li><a href="/admin">管理首页</a></li>
+    <li  class="active">用户列表</li>
+</ol>
+<H3>用户列表</H3>
+{% include 'common/paging.html'%}
+<table class="table  table-striped table-hover">
+    <tr class="active">
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>是否管理员</th>
+        <th>操作处理</th>
+    </tr>
+    {% for user in userList %}
+    <tr>
+        <td>{{user._id.toString()}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>
+            {% if user.isAdmin %}
+            是
+            {% else %}
+            否
+            {%endif%}
+        </td>
+        <td><a href="">修改</a>/<a href="">删除</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% include 'common/paging.html'%}
+{% endblock %}

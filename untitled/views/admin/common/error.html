@@ -1,0 +1,18 @@
+{% extends 'common.html'%}
+{% block main%}
+<ol class="breadcrumb">
+    <li><a href="/admin">分类管理</a></li>
+    <li  class="active">错误提示</li>
+</ol>
+<div class="panel panel-danger">
+    <div class="panel-body">
+    <div class="panel-heading">错误提示</div>
+    <div class="panel-body">
+        {{errorMsg}}
+    </div>
+    <div class="panel-footer">
+        <a href="javascript:window.history.back()">返回上一页</a>
+    </div>
+</div>
+
+{% endblock %}

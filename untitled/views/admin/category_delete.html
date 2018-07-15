@@ -1,0 +1,16 @@
+{% extends 'common/common.html'%}
+{% block main%}
+<ol class="breadcrumb">
+    <li><a href="/admin/category">分类管理</a></li>
+    <li  class="active">分类删除</li>
+</ol>
+<H3>分类删除</H3>
+<form   role="form"  method="post">
+    <div class="form-group">
+        <label for="name">分类名称:</label>
+        <input type="text" class="form-control" id="name" placeholder="请输入类名称" value="{{category.name}}">
+    </div>
+    <button type="submit" class="btn btn-default">删除</button>
+</form>
+
+{% endblock %}

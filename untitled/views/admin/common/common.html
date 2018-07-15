@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管理系统</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/admin.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/admin">后台管理</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                {% if pathname=="/user" %}
+                <li class="active"><a href="#">用户管理 <span class="sr-only">(current)</span></a></li>
+                {%else%}
+                <li><a href="/admin/user">用户管理 <span class="sr-only">(current)</span></a></li>
+                {%endif%}
+                <li><a href="#">设置</a></li>
+                {% if pathname=="/category" || pathname=="/category/add" %}
+                <li class="dropdown active">
+                {%else%}
+                <li class="dropdown">
+                {%endif%}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类管理 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/category">分类首页</a></li>
+                        <li><a href="/admin/category/add">添加分类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文章管理 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">评论</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userInfo.username}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="loginout()">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+    <!--面向对象中的继承模块-->
+    {% block main%}{% endblock %}
+</div>
+
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/angular.min.js"></script>
+<script src="/public/javascripts/bootstrap.min.js"></script>
+<script>
+    $(".collapse li").click(function () {
+        var index=$(this).index();
+        $(this).siblings('li').removeClass('active');
+        $(this).addClass('active');
+    })
+    function loginout() {
+        $.ajax({
+            type:"get",
+            url:"/api/user/loginout",
+            success:function (res) {
+                if(!res.code){
+                    window.location.href="/";
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>

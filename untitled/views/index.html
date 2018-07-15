@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="nodeTest">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body ng-controller="home">
+<img src="/public/images/banner.jpg" class="banner">
+<div class="nav">
+    <ul>
+        <li class="active"><a href="javascrpti:;">首页</a></li>
+        <li><a href="javascrpti:void(0)">HTML5</a></li>
+        <li><a href="javascrpti:void(0)">CSS</a></li>
+        <li><a href="javascrpti:void(0)">JAVASCRIPT</a></li>
+        <li><a href="javascrpti:void(0)">PHP</a></li>
+        <li><a href="javascrpti:void(0)">JAVA</a></li>
+        <li><a href="javascrpti:void(0)">Express</a></li>
+    </ul>
+</div>
+<div class="main">
+    {% if userInfo.uid %}
+    <div class="userInfo">
+        <p class="title">用户信息</p>
+        <p class="username">{{ userInfo.username}}</p>
+        {% if userInfo.isAdmin %}
+        <p>你好，管理员，<a href="/admin" >点击进入管理</a></p>
+        {% else%}
+        <p>你好，欢迎来到我的博客</p>
+        {% endif%}
+        <p> <button  ng-click="loginout()">退 出</button></p>
+    </div>
+    {% else%}
+    <div class="from login">
+        <p class="title">登 录</p>
+        <p><label>用户名 <input type="text" placeholder="请输入姓名" ng-model="username" ></label> </p>
+        <p><label>密&nbsp;&nbsp;&nbsp;码 <input type="password" placeholder="请输入密码" ng-model="password"></label> </p>
+        <p> <button ng-click="userLogin()">登 录</button></p>
+        <p style="text-align:center;">已有账号？<a href="javascript:;" ng-click="register()">马上注册</a></p>
+        <div class="prompt"></div>
+    </div>
+    <div class="from register">
+        <p class="title">注 册</p>
+        <p><label>用户名 <input type="text" placeholder="请输入姓名" ng-model="username"></label> </p>
+        <p><label>密&nbsp;&nbsp;&nbsp;码 <input type="password" placeholder="请输入密码" ng-model="password"></label> </p>
+        <p><label>确&nbsp;&nbsp;&nbsp;认 <input type="password" placeholder="请再次输入密码" ng-model="repassword"></label> </p>
+        <p> <button  ng-click="userRegister()">注 册</button></p>
+        <p style="text-align:center;">已有账号？<a href="javascript:;" ng-click="login()">马上登录</a></p>
+       <div class="prompt"></div>
+    </div>
+    {% endif%}
+</div>
+</body>
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/angular.min.js"></script>
+<script src="/public/javascripts/home.js"></script>
+<script>
+    var app=angular.module("nodeTest",[]);
+    app.controller("home",function($scope,$http){
+      $scope.login=function() {
+            $(".login").show();
+            $(".register").hide();
+        };
+        $scope.register=function() {
+            $(".login").hide();
+            $(".register").show();
+        }
+        //用户登录
+        $scope.userLogin=function() {
+            $.ajax({
+                type:"post",
+                data:{
+                    username:$scope.username,
+                    password:$scope.password
+                },
+                url:"/api/user/login",
+                dataType:"json",
+                success:function (res) {
+                    console.log(res);
+                    $(".prompt").html('<p style="text-align: center;color: #fa3535">'+res.message+'</p>');
+                    if(res.code==0){
+                        setTimeout(function () {
+                            window.location.reload();
+                        },2000)
+                    }
+                }
+            })
+        };
+        //用户注册
+        $scope.userRegister=function() {
+           $.ajax({
+             type:"post",
+             data:{
+                 username:$scope.username,
+                 password:$scope.password,
+                 repassword:$scope.repassword
+             },
+            url:"/api/user/register",
+            dataType:"json",
+            success:function (res) {
+                console.log(res);
+                $(".prompt").html('<p style="text-align: center;color: #fa3535">'+res.message+'</p>');
+                if(!res.code){
+                    setTimeout(function () {
+                        $(".login").show();
+                        $(".register").hide();
+                    },2000);
+                }
+              }
+           })
+        };
+        $scope.loginout=function () {
+            $.ajax({
+                type:"get",
+                url:"/api/user/loginout",
+                success:function (res) {
+                    if(!res.code){
+                        window.location.reload();
+                    }
+                }
+            })
+        }
+    })
+</script>
+</html>

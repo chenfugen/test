@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #f2f3f4;
+}
+li{
+    list-style: none;
+}
+.banner{
+    width: 100%;
+    height:400px;
+}
+.nav{
+    width: 100%;
+    height:50px;
+    background:white;
+    border-bottom: 1px solid #ccc;
+    margin-bottom:15px;
+}
+ul{
+    width:1200px;
+    margin: 0 auto;
+    height: 50px;
+}
+.nav li{
+    float: left;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    cursor:pointer;
+}
+.active a{
+    color:#fa3535;
+}
+.active:after{
+    content: "";
+    position: absolute;
+    width:100px;
+    bottom: 0px;
+    height:2px;
+    left:50%;
+    margin-left:-50px;
+    background:#fa3535;
+}
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    color: #fa3535;
+}
+.main{
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+.from,.userInfo{
+    width:270px;
+    background: white;
+    float: right;
+    padding:0px 15px;
+}
+.from p{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 15px;
+}
+ .title{
+    font-weight:bold;
+    border-bottom:1px solid #eee;
+}
+
+.from input{
+    height: 35px;
+    width:190px;
+    margin-left:10px;
+    line-height: 35px;
+    padding-left: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.from button,.userInfo button{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    background: #fa3535;
+    color: white;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+.register{
+    display: none;
+}
+
+.userInfo p{
+    height: 40px;
+    line-height: 40px;
+    margin-top:5px;
+}
