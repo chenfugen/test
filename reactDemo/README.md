@@ -43,12 +43,12 @@ react开发demo
 │  └─jest  
 ├─public    //入口    
 ├─scripts   //打包配置  
-└─src
+└─src     
     ├─axios   //配置获取接口    
     ├─components   //组件  
     ├─containers   //导入到页面  
     ├─redux        //资源管理库  
-    ├─router        //路由管理  
+    ├─router       //路由管理    
     └─views          //页面    
         ├─from      //表单  
         ├─item      //组建名  
