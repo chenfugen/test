@@ -20,7 +20,7 @@ react开发demo
      - axios  --版本号：^0.19.0
 
   - 项目托管平台地址
-      - [码云]：https://github.com/chenfugen/test/tree/master/APPRouter
+      - [码云]：https://github.com/chenfugen/test/tree/master/reactDemo
    
 #### 使用说明 
   
