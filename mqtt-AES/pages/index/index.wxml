@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="userinfo" wx:if="{{!hasUserInfo}}">
+		<open-data class="userinfo-avatar icon" type="userAvatarUrl"></open-data>
+		<open-data class="userinfo-nickname" type="userNickName"></open-data>
+		<button open-type="getUserInfo" bindgetuserinfo="loginIn" class="loginIn">登录</button>
+	</view>
+	<block wx:else>
+		<swiper indicator-dots="{{indicatorDots}}" indicator-color="white" indicator-active-color="#99F7D0" autoplay="{{autoplay}}"
+		 interval="{{interval}}" duration="{{duration}}" style="width:100%;">
+			<block wx:for="{{imgUrls}}" wx:key="key">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" width="100%" height="100%" />
+				</swiper-item>
+			</block>
+		</swiper>
+		<view>开能二维码</view>
+		<view>
+			<block>
+				<view wx:for="{{images}}" wx:key="index" wx:for-item="image" class="previewimg">
+					<image src="{{image}}" data-src="{{image}}" bindtap="previewImage" style="width:80px;height:80px;" class='img'></image>
+					<button class="loginIn" bindtap="sancode">扫码</button>
+				</view>
+			</block>
+		</view>
+		<import src="../tabbar/tabbar.wxml" />
+		<template is="tabbar" data="{{tabbar}}" />
+	</block>
+</view>

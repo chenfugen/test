@@ -1,0 +1,41 @@
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	margin:100px 0px;
+}
+
+.userinfo-avatar {
+	width: 250rpx;
+	height: 250rpx;
+	margin: 10rpx;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.loginIn {
+	width: 250rpx;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #00CC00;
+	color: white;
+	margin-top: 50px;
+}
+
+
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+swiper-item image{
+	width: 100%;
+	height:100%;
+	}
+	

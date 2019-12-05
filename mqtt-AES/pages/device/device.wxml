@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container logs">
+   <view class="body-view">
+    <view  wx:for="{{logs}}" wx:key="unique"  wx:for-index="idx">{{idx}}</view>
+  </view>
+	<import src="../tabbar/tabbar.wxml" />
+		<template is="tabbar" data="{{tabbar}}" />
+</view>

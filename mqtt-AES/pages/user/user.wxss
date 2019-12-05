@@ -1,0 +1,24 @@
+/* 头部 */
+.user{
+	margin:5px 15px;
+}
+.userHeader {
+	display: flex;
+	width: 100%;
+	height: 8vh;
+	flex-direction: row;
+	padding: 0rpx 20rpx;
+}
+
+.userHeader .userinfo-avatar {
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: auto 0rpx;
+}
+
+.userHeader .userinfo-nickname {
+	font-size: 30rpx;
+	margin: auto 10rpx;
+}
