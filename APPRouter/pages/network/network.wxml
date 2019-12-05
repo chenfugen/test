@@ -1,0 +1,11 @@
+<!--pages/network/network.wxml-->
+<view class="btn-area">
+  <view class="body-view">
+    <text class='title'>{{title}}</text>
+    	<view  class='li' wx:for="{{networkFlow}}" wx:key="key">		
+				   <text>{{item}}</text>
+			</view>
+      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+  disabled="{{disabled}}" bindtap="primary" class='button'> 配置设备上网 </button>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+/* pages/network/network.wxss */
+.title{
+   color:#cccccc;
+   margin:10px 10px;
+    font-size:14px;
+}
+.li{
+  margin: 20px 10px;
+  font-size:14px;
+  height:25px;
+}
+.button{
+  margin: 10px 10px;
+   font-size:14px;
+}

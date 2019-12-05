@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/device/device",
+    "pages/user/user",
+    "pages/tabbar/tabbar",
+    "pages/network/network",
+    "pages/route/route",
+    "pages/bindDevice/bindDevice"
+  ],
+   "permission": {       
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取WiFi信息"   
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "开能测试",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx31b43acf6e51cff0"
+  ],
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

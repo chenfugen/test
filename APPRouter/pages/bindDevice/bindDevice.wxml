@@ -1,0 +1,6 @@
+<!--pages/bindDevice/bindDevice.wxml-->
+
+<view class="body-view">
+     <text>绑定设备</text>
+     
+</view>

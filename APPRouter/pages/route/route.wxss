@@ -1,0 +1,33 @@
+/* pages/route/route.wxss */
+.icon-img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+.icon,.routerName{
+  text-align: center;
+   margin-top: 10px;
+}
+.text{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.name,.sex,.phone,.info{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx;
+  font-size: 14px;
+  border-bottom: 1rpx solid #eee;
+}
+.name input,.phone input,.info input{
+  text-align:right;
+}
+.button{
+  margin: 10px 10px;
+  font-size:14px;
+}
