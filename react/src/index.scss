@@ -1,0 +1,44 @@
+.theme{
+    text-align: center;
+    line-height:200px;
+    font-size: 60px;
+    height:200px;
+    background:#eee;
+}
+.title{
+    font-size: 15px;
+}
+.cell{
+    margin: 25px 0px;
+}
+.right{
+    float: right;
+}
+.headline{
+    line-height: 60px;
+    font-size: 25px;
+}
+.comments{
+    border: 1px solid #eeeeee;
+    border-radius: 4px 4px;
+    position: relative;
+    .userName{
+        line-height: 40px;
+        font-size: 20px;
+        margin: 10px 20px;
+    }
+    .comment{
+        line-height:20px;
+        font-size: 15px;
+        margin: 20px 50px;
+    }
+    .posRight{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+.hint{
+    font-size: 25px;
+}

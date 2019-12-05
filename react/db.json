@@ -1,0 +1,11 @@
+{
+  "comments": [
+    {
+      "username":"Tom",
+       "content":"React挺好的！"
+    },
+    {"username":"Jack",
+      "content":"React太难了！"
+    }
+  ]
+}
