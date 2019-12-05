@@ -1,1 +1,1 @@
-# idukou
+微信小程序AP配网demo
