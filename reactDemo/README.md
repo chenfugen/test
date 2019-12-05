@@ -35,24 +35,24 @@ react开发demo
     
 
 #### 项目文档结构
-├─build   //打包文件  
-│  └─static  //引用包  
+├─build   //打包文件   
+│  └─static  //引用包    
 │      ├─css   //样式  
-│      └─js
-├─config    //配置文件
-│  └─jest
-├─public    //入口  
+│      └─js   
+├─config    //配置文件    
+│  └─jest  
+├─public    //入口    
 ├─scripts   //打包配置  
 └─src
-    ├─axios   //配置获取接口  
-    ├─components   //组件
-    ├─containers   //导入到页面
-    ├─redux        //资源管理库
-    ├─router        //路由管理
-    └─views          //页面  
-        ├─from      //表单
-        ├─item      //组建名
-        └─list      //列表
+    ├─axios   //配置获取接口    
+    ├─components   //组件  
+    ├─containers   //导入到页面  
+    ├─redux        //资源管理库  
+    ├─router        //路由管理  
+    └─views          //页面    
+        ├─from      //表单  
+        ├─item      //组建名  
+        └─list      //列表  
             
 #### 项目版本
    1.0.0
