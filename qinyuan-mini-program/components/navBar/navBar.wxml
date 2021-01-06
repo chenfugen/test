@@ -1,0 +1,8 @@
+<!--components/navBar/navBar.wxml-->
+<view class="navbar clearfloat" style='color:{{color}};height:{{menuBtnHeight}}rpx;margin-top:{{menuButtonTop}}rpx;line-height:{{menuBtnHeight}}rpx;background:{{backgroundColor}}'>
+    <text wx:if='{{showTitle}}' class='title'>{{title}}</text>
+    <!-- <image src="../../static/icon/common_arrow_left.png" class="arrowLeft" wx:if='{{showBackBtn&&iconColor=="black"}}' bindtap='handleBack'></image> -->
+    <!-- <image src="../../static/icon/common_arrowleft_w.png" class="arrowLeft" wx:if='{{showBackBtn&&iconColor=="white"}}' bindtap='handleBack'></image> -->
+    <slot class='title' name='title'></slot>
+    <slot class='leftBar' name='leftBar'></slot>
+</view>

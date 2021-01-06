@@ -1,0 +1,15 @@
+<view class="container">
+    <navBar title='蓝牙读测试' color='black' iconColor='white'></navBar>
+    <button class="part" bindtap="handleGoTestRead">前往 读 测试</button>
+    <button class="part" disabled='{{disabled}}' bindtap="handleTestBlueTooth">开始搜索设备</button>
+    <button class="part" disabled='{{!disabled}}' bindtap="handleReset">重置</button>
+    <view class="part">当前状态：{{statusName}}</view>
+    <view class="part">日志：{{log}}</view>
+    <view class="deviceList">
+        <view class="deviceItem" wx:for="{{deviceList}}" wx:for-index="idx" wx:for-item="item" wx:key='idx' bindtap="handleConnectBle" data-idx="{{idx}}">
+            <view>name：{{item.name}}</view>
+            <view>deviceId：{{item.deviceId}}</view>
+            <view>localName：{{item.localName}}</view>
+        </view>
+    </view>
+</view>

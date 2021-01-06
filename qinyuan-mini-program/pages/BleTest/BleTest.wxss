@@ -1,0 +1,25 @@
+.main {
+    margin-top: 100rpx;
+}
+
+textarea {
+    margin: 0 auto;
+    width: 600rpx;
+    height: 600rpx;
+    border: 1px solid #333;
+    padding: 10rpx;
+}
+
+.actBtn {
+    width: 300rpx;
+    margin-top: 20rpx;
+}
+
+.part {
+    text-align: center;
+    margin-top: 100rpx;
+}
+
+.deviceList .deviceItem {
+    margin-top: 20rpx;
+}

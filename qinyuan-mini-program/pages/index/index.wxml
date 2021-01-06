@@ -1,0 +1,5 @@
+<view class="container">
+	<navBar title='骨架代码' color='black' iconColor='white'></navBar>
+	<view class="index">
+	</view>
+</view>

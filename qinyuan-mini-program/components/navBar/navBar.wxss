@@ -1,0 +1,21 @@
+/* components/navBar/navBar.wxss */
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    line-height: 100%;
+    position: relative;
+}
+
+.navbar .title {
+    font-family: PingFangSC-Medium;
+    font-size: 36rpx;
+}
+
+.navbar .arrowLeft {
+    position: absolute;
+    top: 8rpx;
+    left: 20rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
