@@ -1,0 +1,67 @@
+{
+    "name": "vuemodel4web",
+    "author": "nelson_l@sina.com",
+    "version": "2.0.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "release": "vue-cli-service build --mode release",
+        "lint": "vue-cli-service lint",
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "echarts": "^4.2.1",
+        "element-ui": "^2.11.1",
+        "mddir": "^1.1.1",
+        "throttle-debounce": "^2.1.0",
+        "vue": "^2.5.17",
+        "vue-router": "^3.0.2",
+        "vuex": "^3.0.1"
+    },
+    "devDependencies": {
+        "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.3",
+        "@vue/babel-preset-jsx": "^1.0.0-beta.3",
+        "@vue/cli-plugin-babel": "^3.0.5",
+        "@vue/cli-plugin-eslint": "^3.0.5",
+        "@vue/cli-service": "^3.0.5",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.8.0",
+        "eslint-plugin-vue": "^5.0.0-0",
+        "less": "^3.10.1",
+        "less-loader": "^5.0.0",
+        "mockjs": "^1.0.1-beta3",
+        "node-sass": "^4.11.0",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.5.17",
+        "vuepress": "^0.14.10"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "rules": {
+            "no-var": 2
+        },
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}

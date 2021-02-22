@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+.clearfloat:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: "";
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.margin-left {
+    margin-left: 20px;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.btn-warning {
+    color: #f56c6c !important;
+}
+
+.btn-primary {
+    color: #409eff !important;
+}
+
+.btn-success {
+    color: #67c23a !important;
+}

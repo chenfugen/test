@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "shop": "创意菜",
+    "product": "百香果（冷饮）1扎",
+    "price": 19.9,
+    "ifCommented": true
+  },
+  {
+    "id": 2,
+    "shop": "舌尖美味",
+    "product": "烧仙草（热饮）1杯",
+    "price": 29.9,
+    "ifCommented": false
+  },
+  {
+    "id": 3,
+    "shop": "正一品",
+    "product": "红豆奶茶（热饮）1杯",
+    "price": 9.9,
+    "ifCommented": false
+  },
+  {
+    "id": 4,
+    "shop": "冰感触觉",
+    "product": "奶盖（冷饮）1杯",
+    "price": 19.9,
+    "ifCommented": false
+  }
+]

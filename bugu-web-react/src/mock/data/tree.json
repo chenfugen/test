@@ -1,0 +1,288 @@
+[{
+  "moduleName":"数码管理",
+  "icon":"iconmenu_icon_numerical_code_management",
+  "sort":1,
+  "moduleId":"filterNumManage",
+  "child":[{
+    "menuPath":"/digitalStatistics",
+    "menuIcon":null,
+    "moduleName":"数码统计",
+    "moduleId":"filterStatistic",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"数码统计（全部）",
+      "url":"/api/antifakeManage/web/numberManage/number/v1/getAllNumberCount"
+    }, {
+      "moduleName":"数码统计（月日）",
+      "url":"/api/antifakeManage/web/numberManage/number/v1/getNumberCount"
+    }]
+  }, {
+    "menuPath":"/digitalSend",
+    "menuIcon":null,
+    "moduleName":"数码发送",
+    "moduleId":"filterSend",
+    "menuSort":2,
+    "child":[{
+      "moduleName":"下载数码",
+      "url":"/api/antifakeManage/web/number/operation/v1/download"
+    }, {"moduleName":"数码发送列表", "url":"/api/antifakeManage/web/number/operation/v1/list"}, {
+      "moduleName":"邮件发送数码",
+      "url":"/api/antifakeManage/web/number/operation/v1/send"
+    }, {"moduleName":"重发邮件", "url":"/api/antifakeManage/web/number/operation/v1/resend"}, {
+      "moduleName":"重试发送",
+      "url":"/api/antifakeManage/web/number/operation/v1/retry"
+    }]
+  }, {
+    "menuPath":"/digitalManage",
+    "menuIcon":null,
+    "moduleName":"数码配置",
+    "moduleId":"filterSetting",
+    "menuSort":3,
+    "child":[{
+      "moduleName":"数码-配置",
+      "url":"/api/antifakeManage/web/numberManage/number/v1/addFilterNumberAndUpdateStatusBatch"
+    }, {
+      "moduleName":"数码列表",
+      "url":"/api/antifakeManage/web/numberManage/number/v1/getNumberList"
+    }]
+  }]
+}, {
+  "moduleName":"设备管理",
+  "icon":"iconmenu_icon_device_management",
+  "sort":2,
+  "moduleId":"deviceManage",
+  "child":[{
+    "menuPath":"/deviceManage",
+    "menuIcon":null,
+    "moduleName":"设备配置",
+    "moduleId":"deviceSetting",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"设备批量编辑",
+      "url":"/api/antifakeManage/web/deviceManage/device/v1/batchUpdate"
+    }, {"moduleName":"设备列表", "url":"/api/antifakeManage/web/deviceManage/device/v1/page"}, {
+      "moduleName":"设备编辑",
+      "url":"/api/antifakeManage/web/deviceManage/device/v1/update"
+    }, {"moduleName":"设备详情", "url":"/api/antifakeManage/web/deviceManage/device/v1/detail"}, {
+      "moduleName":"设备删除",
+      "url":"/api/antifakeManage/web/deviceManage/device/v1/delete"
+    }]
+  }]
+}, {
+  "moduleName":"用户管理",
+  "icon":"iconmenu_icon_user_management",
+  "sort":3,
+  "moduleId":"userManage",
+  "child":[{
+    "menuPath":"/userList",
+    "menuIcon":null,
+    "moduleName":"用户列表",
+    "moduleId":"userList",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"用户列表",
+      "url":"/api/antifakeManage/web/userManage/userList/v1/list"
+    }, {"moduleName":"用户删除", "url":"/api/antifakeManage/web/userManage/userList/v1/delete"}, {
+      "moduleName":"编辑用户",
+      "url":"/api/antifakeManage/web/userManage/userList/v1/update"
+    }, {
+      "moduleName":"更新默认可以激活次数",
+      "url":"/api/antifakeManage/web/userManage/userList/v1/updateDefaultActivationTotalNumber"
+    }]
+  }]
+}, {
+  "moduleName":"配置中心",
+  "icon":"iconmenu_icon_configuration_center",
+  "sort":4,
+  "moduleId":"settingCenter",
+  "child":[{
+    "menuPath":"/productionSet",
+    "menuIcon":null,
+    "moduleName":"产品设置",
+    "moduleId":"productSetting",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"产品设置列表",
+      "url":"/api/antifakeManage/web/productManage/product/v1/list"
+    }, {
+      "moduleName":"产品同步刷新",
+      "url":"/api/antifakeManage/web/productManage/product/v1/fresh"
+    }, {
+      "moduleName":"产品编辑",
+      "url":"/api/antifakeManage/web/productManage/product/v1/updateSetting"
+    }, {
+      "moduleName":"产品配置文件",
+      "url":"/api/antifakeManage/web/productManage/productFile/v1/saveProductFile"
+    }, {
+      "moduleName":"产品-滤芯配置",
+      "url":"/api/antifakeManage/web/productManage/product/v1/updateFilterErp"
+    }, {
+      "moduleName":"产品配置文件查询",
+      "url":"/api/antifakeManage/web/productManage/productFile/v1/getProductFileInfo"
+    }, {
+      "moduleName":"获取配置文件",
+      "url":"/api/antifakeManage/web/productManage/product/v1/getGuide"
+    }, {
+      "moduleName":"产品设置是否禁用",
+      "url":"/api/antifakeManage/web/productManage/product/v1/updateInUse"
+    }]
+  }]
+}, {
+  "moduleName":"客服服务", "icon":"iconmenu_icon_customer_service", "sort":5, "moduleId":"customerService", "child":[{
+    "menuPath":"/customerService",
+    "menuIcon":null,
+    "moduleName":"客服服务",
+    "moduleId":"customerManage",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"设备-设备列表",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/getDeviceList"
+    }, {
+      "moduleName":"用户-编辑次数",
+      "url":"/api/antifakeManage/web/customerManage/user/v1/updateUserActivationNumber"
+    }, {
+      "moduleName":"滤芯-增加次数",
+      "url":"/api/antifakeManage/web/customerManage/filter/v1/addFilterNumber"
+    }, {
+      "moduleName":"用户-设备列表",
+      "url":"/api/antifakeManage/web/customerManage/user/v1/getUserDeviceList"
+    }, {
+      "moduleName":"滤芯-查询列表",
+      "url":"/api/antifakeManage/web/customerManage/filter/v1/getFilterList"
+    }, {
+      "moduleName":"滤芯-激活记录",
+      "url":"/api/antifakeManage/web/customerManage/filter/v1/getFilterActiveRecordList"
+    }, {
+      "moduleName":"设备查询",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/getSnDeviceList"
+    }, {
+      "moduleName":"设置激活/未激活",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/updateDeviceActiveStatus"
+    }, {
+      "moduleName":"短信重发滤芯激活码",
+      "url":"/api/antifakeManage/web/customerManage/filter/v1/resendCodeBySms"
+    }, {
+      "moduleName":"短信重发设备激活码",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/resendCodeBySms"
+    }, {
+      "moduleName":"滤芯-生成激活码",
+      "url":"/api/antifakeManage/web/customerManage/filter/v1/sendFilterActiveCode"
+    }, {
+      "moduleName":"设备-生成激活码",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/sendDeviceActiveCode"
+    }, {
+      "moduleName":"用户查询",
+      "url":"/api/antifakeManage/web/customerManage/user/v1/getUserList"
+    }, {
+      "moduleName":"设备-激活记录",
+      "url":"/api/antifakeManage/web/customerManage/device/v1/getDeviceActiveRecordList"
+    }, {
+      "moduleName":"获取产品对应滤芯",
+      "url":"/api/antifakeManage/web/productManage/product/v1/filters"
+    }]
+  }]
+}, {
+  "moduleName":"系统管理",
+  "icon":"iconmenu_icon_system_management",
+  "sort":6,
+  "moduleId":"systemManage",
+  "child":[{
+    "menuPath":"/emailManage",
+    "menuIcon":null,
+    "moduleName":"邮箱管理",
+    "moduleId":"mailManage",
+    "menuSort":1,
+    "child":[{
+      "moduleName":"启用、禁用邮箱",
+      "url":"/api/antifakeManage/web/systemManage/mailManage/v1/changeStatus"
+    }, {"moduleName":"邮箱列表", "url":"/api/antifakeManage/web/systemManage/mailManage/v1/list"}, {
+      "moduleName":"编辑邮箱",
+      "url":"/api/antifakeManage/web/systemManage/mailManage/v1/edit"
+    }, {
+      "moduleName":"删除邮箱",
+      "url":"/api/antifakeManage/web/systemManage/mailManage/v1/delete"
+    }, {
+      "moduleName":"新增邮箱",
+      "url":"/api/antifakeManage/web/systemManage/mailManage/v1/add"
+    }]
+  }, {
+    "menuPath":"/staffManage",
+    "menuIcon":null,
+    "moduleName":"员工管理",
+    "moduleId":"accountManage",
+    "menuSort":2,
+    "child":[{
+      "moduleName":"删除员工",
+      "url":"/api/antifakeManage/web/systemManage/accountManage/v1/deleteAccount"
+    }, {
+      "moduleName":"启用、禁用员工状态",
+      "url":"/api/antifakeManage/web/systemManage/accountManage/v1/updateUserAccountStatus"
+    }, {
+      "moduleName":"员工列表",
+      "url":"/api/antifakeManage/web/systemManage/accountManage/v1/userAccountList"
+    }, {
+      "moduleName":"编辑员工",
+      "url":"/api/antifakeManage/web/systemManage/accountManage/v1/updateUserAccount"
+    }, {
+      "moduleName":"创建员工",
+      "url":"/api/antifakeManage/web/systemManage/accountManage/v1/createAccount"
+    }]
+  }, {
+    "menuPath":"/supplierManage",
+    "menuIcon":null,
+    "moduleName":"供应商管理",
+    "moduleId":"supplierManage",
+    "menuSort":3,
+    "child":[{
+      "moduleName":"新增供应商",
+      "url":"/api/antifakeManage/web/systemManage/supplierManage/v1/add"
+    }, {
+      "moduleName":"编辑供应商",
+      "url":"/api/antifakeManage/web/systemManage/supplierManage/v1/edit"
+    }, {
+      "moduleName":"删除供应商",
+      "url":"/api/antifakeManage/web/systemManage/supplierManage/v1/delete"
+    }, {
+      "moduleName":"供应商列表",
+      "url":"/api/antifakeManage/web/systemManage/supplierManage/v1/list"
+    }, {
+      "moduleName":"启用、禁用供应商",
+      "url":"/api/antifakeManage/web/systemManage/supplierManage/v1/changeStatus"
+    }]
+  }, {
+    "menuPath":"/roleManage",
+    "menuIcon":null,
+    "moduleName":"角色管理",
+    "moduleId":"roleManage",
+    "menuSort":4,
+    "child":[{
+      "moduleName":"删除角色",
+      "url":"/api/antifakeManage/web/systemManage/roleManage/v1/deleteRole"
+    }, {
+      "moduleName":"编辑角色",
+      "url":"/api/antifakeManage/web/systemManage/roleManage/v1/updateRole"
+    }, {
+      "moduleName":"启用、禁用角色状态",
+      "url":"/api/antifakeManage/web/systemManage/roleManage/v1/updateRoleStatus"
+    }, {
+      "moduleName":"创建角色",
+      "url":"/api/antifakeManage/web/systemManage/roleManage/v1/createRole"
+    }, {
+      "moduleName":"角色列表",
+      "url":"/api/antifakeManage/web/systemManage/roleManage/v1/roleList"
+    }]
+  }, {
+    "menuPath":"/log",
+    "menuIcon":null,
+    "moduleName":"系统日志",
+    "moduleId":"systemLog",
+    "menuSort":5,
+    "child":[{
+      "moduleName":"日志列表",
+      "url":"/api/antifakeManage/web/systemManage/logRecord/v1/logList"
+    }]
+  }, {
+    "menuPath":"/deviceLog",
+    "menuIcon":null, "moduleName":"设备日志", "moduleId":"deviceLog", "menuSort":6
+  }]
+}]
